@@ -7,6 +7,10 @@ fn factorial(num: u8) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    (1..=num as u64)
+        .into_iter()
+        .reduce(|acc, x| acc * x)
+        .unwrap_or(1)
 }
 
 fn main() {
